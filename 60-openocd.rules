@@ -1,0 +1,5 @@
+# /etc/udev/rules.d/60-openocd.rules
+
+# Raspberry Pi Picoprobe
+# ref: https://areed.me/posts/2021-05-09_setting_up_raspberry_pi_pico_development_in_vscode_on_arch_linux/
+ATTRS{idVendor}=="2e8a", ATTRS{idProduct}=="0004", TAG+="uaccess"

@@ -1,0 +1,5 @@
+# /etc/udev/rules.d/50-usbserial.rules
+# For openocd serial ports
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", GROUP="plugdev", MODE="0660", TAG+="uaccess"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="2e8a", ATTRS{idProduct}=="0004", GROUP="plugdev", MODE="0660", TAG+="uaccess"
+
