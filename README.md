@@ -16,5 +16,9 @@ Three extensions still need to be installed:
 Fixes problems seen as:
 "error: Can't find a picoprobe device! Please check device connections and permissions." 
 and problems opening `/dev/ttyACM0` serial port
-- The gdb-multiarch, version 12.0.90, had a bug that caused the debugger to throw an assertion whenever the target program paused. Solution here: https://forums.raspberrypi.com/viewtopic.php?t=333992#p2045778. I think it's risky to automate this reliably in all situations.
+- The gdb-multiarch, version 12.0.90, had a bug that caused the debugger to throw an assertion whenever the target program paused, resulting in an error in the Debug Console
+  ```
+  build/gdb-wIRHdd/gdb-12.0.90/gdb/value.c:1731: internal-error: value_copy: Assertion arg->contents != nullptr' failed.
+  ``` 
+  Solution here: https://forums.raspberrypi.com/viewtopic.php?t=333992#p2045778. I think it's risky to automate this reliably in all situations.
 - minicom didn't install
